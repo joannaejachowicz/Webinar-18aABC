@@ -1,15 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite thread-count="1" name="Failed suite [Surefire suite]" verbose="0">
-  <test thread-count="1" name="Surefire test(failed)" verbose="0">
+<suite name="Failed suite [All Test Suite]" guice-stage="DEVELOPMENT" verbose="0">
+  <test thread-count="5" name="/Users/joannajachowicz/IdeaProjects/Webinar-18a(failed)" verbose="0">
     <classes>
-      <class name="HomePageTests">
+      <class name="sampleshop.pages.HomePageTests">
         <methods>
-          <include name="setUp"/>
           <include name="tearDown"/>
-          <include name="checkDescriptionHeaderText"/>
+          <include name="testTearDown"/>
+          <include name="setUp"/>
+          <include name="testWillFail"/>
         </methods>
-      </class> <!-- HomePageTests -->
+      </class> <!-- sampleshop.pages.HomePageTests -->
     </classes>
-  </test> <!-- Surefire test(failed) -->
-</suite> <!-- Failed suite [Surefire suite] -->
+  </test> <!-- /Users/joannajachowicz/IdeaProjects/Webinar-18a(failed) -->
+</suite> <!-- Failed suite [All Test Suite] -->

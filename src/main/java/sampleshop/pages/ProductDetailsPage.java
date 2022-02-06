@@ -35,8 +35,11 @@ public class ProductDetailsPage extends BasePage {
 
 
     public ProductDetailsPage selectSize(String sizeToSelect) {
+        LOGGER.debug("Wybieram rozmiar w trybie DEBUG " + sizeToSelect);
+        LOGGER.info("Wybieram rozmiar " + sizeToSelect);
         Select select = new Select(sizeSelect);
-        select.selectByVisibleText((sizeToSelect));
+        select.selectByVisibleText(sizeToSelect);
+
         return this;
     }
 
