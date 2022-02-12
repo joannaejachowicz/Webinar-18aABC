@@ -1,4 +1,4 @@
-package sampleshop;
+package sampleshop.pages;
 
 import java.io.FileInputStream;
 import java.io.IOException;

@@ -10,8 +10,6 @@ import org.openqa.selenium.chrome.ChromeDriverService;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.ITestResult;
 import org.testng.annotations.*;
-import sampleshop.PropertiesConfig;
-import sampleshop.pages.utils.PropertiesConfig;
 import sampleshop.pages.utils.ScreenshotUtil;
 
 import java.io.File;
