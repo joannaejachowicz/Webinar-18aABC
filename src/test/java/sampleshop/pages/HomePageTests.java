@@ -2,6 +2,8 @@ package sampleshop.pages;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;
+import sampleshop.HomePage;
+import sampleshop.pages.BaseTest;
 
 public class HomePageTests extends BaseTest {
     @Test

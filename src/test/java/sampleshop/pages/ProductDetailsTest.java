@@ -1,8 +1,12 @@
 package sampleshop.pages;
 
+import io.qameta.allure.*;
+import jdk.jfr.Description;
 import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
+import sampleshop.ProductDetailsPage;
+import sampleshop.pages.BaseTest;
 
 public class ProductDetailsTest extends BaseTest {
 
@@ -15,6 +19,11 @@ public class ProductDetailsTest extends BaseTest {
     }
 
     @Test(description = "Zamawianie produktu - dodanie do koszyka")
+    @Description("To jest opis do zamowienia elementu")
+    @Severity(SeverityLevel.BLOCKER)
+    @Epic("Zamawianie produktu")
+    @Link(name = "Link do dokumentacji", url = "http://webinar.edu/testuj/docs")
+    @Issue("BUG-99")
     public void orderElement() {
         int addedProducts = 100;
 
@@ -29,5 +38,13 @@ public class ProductDetailsTest extends BaseTest {
         Assert.assertEquals(displayedQuantity, addedProducts);
     }
 
-
+    @Test
+    @Severity(SeverityLevel.MINOR)
+    @Epic("WDU-001")
+    @Story("EDU-111")
+    @Link(name = "link do story", url = "http://webinar.edu/testuj/story")
+    @TmsLink("TMS-12")
+    public void thisMethodWillFail() {
+        Assert.assertEquals(3, 3);
+    }
 }

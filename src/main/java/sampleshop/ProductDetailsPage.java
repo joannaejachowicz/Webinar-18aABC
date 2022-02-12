@@ -1,5 +1,6 @@
-package sampleshop.pages;
+package sampleshop;
 
+import io.qameta.allure.Step;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindAll;
@@ -11,6 +12,8 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
 import java.util.List;
+
+import static io.qameta.allure.Allure.step;
 
 public class ProductDetailsPage extends BasePage {
     public ProductDetailsPage(WebDriver driver) {
@@ -33,8 +36,9 @@ public class ProductDetailsPage extends BasePage {
     @FindBy(css = "#blockcart-modal > div > div > div.modal-body > div > div.col-md-5.divide-right > div > div:nth-child(2) > span.product-quantity > strong")
     private WebElement quantityOfProductsInCart;
 
-
+    @Step("Wybor rozmiaru")
     public ProductDetailsPage selectSize(String sizeToSelect) {
+        step("Wybór rozmiaru");
         LOGGER.debug("Wybieram rozmiar w trybie DEBUG " + sizeToSelect);
         LOGGER.info("Wybieram rozmiar " + sizeToSelect);
         Select select = new Select(sizeSelect);
@@ -44,11 +48,13 @@ public class ProductDetailsPage extends BasePage {
     }
 
     public ProductDetailsPage clickAddToCartButton() {
+        step("dodanie do koszyka");
         buttonClick(addToCartButton);
         return this;
     }
 
     public ProductDetailsPage selectColor(String color) {
+        step("wybor koloru");
         colors.forEach(c -> {
             if (color.equals(c.getAttribute("title"))) {
                 c.click();

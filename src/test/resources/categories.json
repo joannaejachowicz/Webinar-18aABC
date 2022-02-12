@@ -1,0 +1,28 @@
+[
+  {
+    "name": "Ignored tests",
+    "matchedStatuses": [
+      "skipped"
+    ]
+  },
+  {
+    "name": "Product defects",
+    "matchedStatuses": [
+      "failed"
+    ]
+  },
+  {
+    "name": "Brak elementu",
+    "matchedStatuses": [
+      "broken"
+    ],
+    "traceRegex": ".*NoSuchElementException.*"
+  },
+  {
+    "name": "Moja kategoria",
+    "matchedStatuses": [
+      "failed"
+    ],
+    "traceRegex": ".*WillFail.*"
+  }
+]
